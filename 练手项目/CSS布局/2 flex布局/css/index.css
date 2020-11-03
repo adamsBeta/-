@@ -1,0 +1,304 @@
+body {
+  max-width: 540px;
+  min-width: 320px;
+  margin: 0 auto;
+  font: normal 14px/1.5 Tahoma, "Lucida Grande", Verdana, "Microsoft Yahei",
+    STXihei, hei;
+  color: #000;
+  background: #f2f2f2;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+  height: 2000px;
+}
+a {
+  text-decoration: none;
+  color: #222;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+div {
+  box-sizing: border-box;
+}
+/* 搜索模块 */
+.search-index {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 100%;
+  /* 固定定位与父级无关，而是以屏幕为准 */
+  max-width: 540px;
+  min-width: 320px;
+  height: 44px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
+  z-index: 12;
+}
+.search {
+  position: relative;
+  flex: 1;
+  height: 28px;
+  padding-left: 35px;
+  border: 1px solid #ccc;
+  margin: 7px 10px;
+  border-radius: 15px;
+  color: #666;
+  background-color: #fff;
+  font-size: 15px;
+  line-height: 26px;
+}
+.search::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 35px;
+  height: 100%;
+  background: url(../images/sprite.png) no-repeat 15px 7px;
+  background-size: 21px auto;
+  overflow: hidden;
+}
+.user {
+  width: 44px;
+  height: 44px;
+  font-size: 12px;
+  text-align: center;
+  color: #fff;
+}
+.user::before {
+  content: "";
+  display: block;
+  width: 22px;
+  height: 22px;
+  background: url(../images/sprite.png) no-repeat 1px -36px;
+  background-size: 21px auto;
+  margin: 3px auto 1px;
+}
+.focus {
+  position: relative;
+  transform: translateY(1px);
+  overflow: hidden;
+}
+.focus img {
+  width: 100%;
+}
+/* 局部导航栏 */
+.local-nav {
+  position: relative;
+  display: flex;
+  height: 64px;
+  background-color: #fff;
+  border-radius: 8px;
+  margin: -57px 12px 10px;
+  padding: 4px 0 2px;
+}
+.local-nav li {
+  flex: 1;
+}
+.local-nav a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+}
+.local-nav li [class^="local-nav-icon"] {
+  width: 40px;
+  height: 40px;
+  background: url(../images/localnav-bg.png) no-repeat 0 0;
+  background-size: 40px auto;
+}
+.local-nav li .local-nav-icon-icon2 {
+  background-position: 0 -40px;
+}
+.local-nav li .local-nav-icon-icon3 {
+  background-position: 0 -80px;
+}
+.local-nav li .local-nav-icon-icon4 {
+  background-position: 0 -120px;
+}
+.local-nav li .local-nav-icon-icon5 {
+  background-position: 0 -160px;
+}
+/* 主导航栏 */
+nav {
+  border-radius: 8px;
+  margin: 4px 4px 3px;
+  overflow: hidden;
+}
+.nav-common {
+  display: flex;
+  height: 66.2px;
+}
+.nav-common:nth-child(2) {
+  margin: 1px 0;
+}
+.nav-items {
+  display: flex;
+  flex: 23%;
+}
+.nav-items:first-child {
+  flex: 31%;
+  padding-left: 12px;
+}
+.nav-items:first-child a {
+  text-align: left;
+}
+.nav-items a {
+  flex: 1;
+  line-height: 66.2px;
+  color: #fff;
+  text-align: center;
+}
+/* -n+3就是选择前面两个元素 */
+.nav-items:nth-child(-n + 3) {
+  border-right: 1px solid #fff;
+}
+/* 各行细节 */
+/* 第1行 */
+.nav-hotel {
+  background: -webkit-linear-gradient(left, #fa5956, #fb8650 54%);
+}
+.nav-hotel .nav-items:nth-child(3) {
+  background: -webkit-linear-gradient(left, #ffbc49, #ffd252);
+  flex: 0 1 46%;
+}
+.nav-hotel .nav-items:nth-child(1) a {
+  background: url(../images/hotel.png) no-repeat right bottom;
+  background-size: 73px auto;
+}
+.nav-hotel .nav-items:nth-child(2) a {
+  background: url(../images/hotel2.png) no-repeat left bottom;
+  background-size: 37px auto;
+}
+.nav-hotel .nav-items:nth-child(3) a {
+  background: url(../images/hotel3.png) no-repeat right bottom;
+  background-size: 100% auto;
+  color: #a05416;
+}
+/* 第2行 */
+.nav-flight {
+  background: -webkit-linear-gradient(left, #4b8fed, #53bced);
+}
+.nav-flight .nav-items:nth-child(1) a {
+  background: url(../images/flight.png) no-repeat right bottom;
+  background-size: 79px auto;
+}
+.nav-flight .nav-items:nth-child(2) a {
+  background: url(../images/flight2.png) no-repeat left bottom;
+  background-size: 37px auto;
+}
+/* 第3行 */
+.nav-travel {
+  background: -webkit-linear-gradient(left, #34c2aa, #6cd557);
+}
+.nav-travel .nav-items:nth-child(1) a {
+  background: url(../images/travel.png) no-repeat right bottom;
+  background-size: 94px auto;
+}
+.nav-travel .nav-items:nth-child(2) a {
+  background: url(../images/travel2.png) no-repeat left bottom;
+  background-size: 61px auto;
+}
+/* 副导航栏 */
+.subnav-entry {
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 8px;
+  margin: 0 4px;
+  padding: 5px 0;
+}
+.subnav-entry li {
+  /* 盒子可以用%来表示，这是相对于父元素来说的 */
+  flex: 20%;
+}
+.subnav-entry a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.subnav-entry-icon {
+  width: 28px;
+  height: 28px;
+  margin-top: 4px;
+  background: url(../images/subnav-bg.png) no-repeat;
+  background-size: 28px auto;
+}
+/* 销售模块 */
+.sales-box {
+  border-top: 1px solid #bbb;
+  background-color: #fff;
+}
+.sales-hd {
+  position: relative;
+  padding: 0 8px;
+  height: 44px;
+  line-height: 44px;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  overflow: hidden;
+}
+.sales-hd h2 {
+  position: relative;
+  text-indent: -99px;
+}
+.sales-hd h2:after {
+  position: absolute;
+  content: "";
+  width: 79px;
+  height: 15px;
+  left: 8px;
+  top: -2px;
+  background: url(../images/hot.png) no-repeat 0 -19px;
+  background-size: 79px auto;
+}
+.gg {
+  position: absolute;
+  left: 90px;
+  width: 36px;
+  height: 15px;
+  top: 6px;
+  background: url(../images/gg.png) no-repeat;
+  background-size: 36px auto;
+  transform: translateY(-50%);
+}
+.more {
+  position: absolute;
+  right: 8px;
+  top: 11px;
+  height: 20px;
+  line-height: 20px;
+  background: -webkit-linear-gradient(left, #ff4e63, #ff6cc9);
+  border-radius: 10px;
+  padding: 0 17px 0 7px;
+  color: #fff;
+}
+.more::after {
+  position: absolute;
+  content: "";
+  top: 6px;
+  right: 9px;
+  width: 7px;
+  height: 7px;
+  border: 2px solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(-45deg);
+}
+.sales-bd {
+  padding-top: 1px;
+}
+.row {
+  display: flex;
+}
+.row a {
+  flex: 1;
+}
+.row a:first-child {
+  border-right: 1px solid #ccc;
+}
+.row a img {
+  width: 100%;
+}

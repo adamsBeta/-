@@ -1,0 +1,135 @@
+@import "common";
+// 首页样式文件
+body {
+  min-width: 320px;
+  width: 15rem;
+  margin: 0 auto;
+  line-height: 1.5;
+  font-family: Arial, Helvetica;
+  background: #f2f2f2;
+}
+@baseFont: 50;
+// 顶部搜索框
+.search-content {
+  position: relative;
+  display: block;
+  width: 15rem;
+  height: 180rem / @baseFont;
+  background-color: #ffdb47;
+  .content-one {
+    display: flex;
+    width: 682rem / @baseFont;
+    height: 88rem / @baseFont;
+    margin: 0 auto;
+    justify-content: space-between;
+    .classify {
+      width: 36rem / @baseFont;
+      height: 60rem / @baseFont;
+      margin: 17rem / @baseFont 0 0 0;
+      background: url(../images/classify.png) no-repeat;
+      background-size: 36rem / @baseFont 60rem / @baseFont;
+    }
+    .imgad img {
+      width: 450rem / @baseFont;
+      height: 55rem / @baseFont;
+      margin-top: 18rem / @baseFont;
+      margin-right: 50rem / @baseFont;
+    }
+    .login {
+      width: 36rem / @baseFont;
+      height: 60rem / @baseFont;
+      margin: 17rem / @baseFont 0;
+      right: 10rem / @baseFont;
+      background: url(../images/login.png) no-repeat;
+      background-size: 36rem / @baseFont 60rem / @baseFont;
+    }
+  }
+  .content-two {
+    width: 750rem / @baseFont;
+    height: 92rem / @baseFont;
+    box-sizing: border-box;
+    padding: 0 24rem / @baseFont;
+    .search {
+      position: relative;
+      flex: 1;
+      i {
+        position: absolute;
+        width: 36rem / @baseFont;
+        height: 36rem / @baseFont;
+        top: 28rem / @baseFont;
+        left: 20rem / @baseFont;
+        background: url(../images/search-icon.png) no-repeat;
+        background-size: 36rem / @baseFont 36rem / @baseFont;
+      }
+      input {
+        width: 100%;
+        height: 64rem / @baseFont;
+        border-radius: 30rem / @baseFont;
+        background-color: #fff;
+        border: 0;
+        outline: none;
+        font-size: 28rem / @baseFont;
+        padding: 3rem / @baseFont 20rem / @baseFont 0 65rem / @baseFont;
+        color: #666;
+      }
+    }
+  }
+}
+// 横幅
+.banner {
+  position: relative;
+  width: 750rem / @baseFont;
+  height: 260rem / @baseFont;
+  background: url(../images/banner.png) no-repeat;
+  background-size: 750rem / @baseFont 260rem / @baseFont;
+  .wrapper {
+    position: absolute;
+    width: 702rem / @baseFont;
+    height: 260rem / @baseFont;
+    top: 0;
+    left: 24rem / @baseFont;
+    border-radius: 24rem / @baseFont;
+    overflow: hidden;
+    img {
+      position: absolute;
+      width: 750rem / @baseFont;
+      height: 368rem / @baseFont;
+      bottom: 0;
+    }
+  }
+}
+// 广告
+.ad {
+  width: 750rem / @baseFont;
+  height: 250rem / @baseFont;
+  margin-top: 24rem / @baseFont;
+  display: flex;
+  img {
+    width: 250rem / @baseFont;
+    height: 250rem / @baseFont;
+  }
+}
+// 导航栏
+nav {
+  width: 750rem / @baseFont;
+  height: 320rem / @baseFont;
+  a {
+    float: left;
+    width: 150rem / @baseFont;
+    height: 142rem / @baseFont;
+    text-align: center;
+    img {
+      display: block;
+      width: 84rem / @baseFont;
+      height: 84rem / @baseFont;
+      margin: 24rem / @baseFont auto 0;
+    }
+    span {
+      display: block;
+      line-height: 28rem / @baseFont;
+      font-size: 22rem / @baseFont;
+      color: #666;
+      margin-top: 5rem / @baseFont;
+    }
+  }
+}
